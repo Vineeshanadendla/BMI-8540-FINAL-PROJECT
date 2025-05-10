@@ -1,11 +1,13 @@
-
 # BMI-8540-FINAL-PROJECT
 
 ## Project Title
 BMI-8540 Final Project: Gut Microbiome Analysis and Aging
 
+## Research Question
+What are the most significant bacterial markers in the gut microbiome that correlate with age-related health changes, such as increased inflammation or decreased metabolic health?
+
 ## Abstract
-This project is part of the BMI-8540 course and focuses on analyzing bacterial data related to the gut microbiome and aging. The objective is to build a web-based tool that allows users to upload bacterial data, process it, and categorize bacteria based on various health markers. The project aims to explore the relationship between the gut microbiome and aging, with a focus on identifying bacteria that act as health indicators. The gut microbiome is increasingly recognized as a key player in aging and health, influencing metabolic processes, immune responses, and chronic disease progression. Understanding these changes can help identify potential biomarkers for healthy aging and therapeutic interventions. By leveraging data analysis and visualization techniques, this project seeks to uncover patterns in the microbial composition of the aging gut, providing a resource for researchers, clinicians, and bioinformatics students.
+This project is part of the BMI-8540 course and focuses on analyzing bacterial data related to the gut microbiome and aging. The objective is to build a web-based tool that allows users to upload bacterial data, process it, and categorize bacteria based on various health markers. The project aims to explore the relationship between the gut microbiome and aging, with a focus on identifying bacteria that act as health indicators. The gut microbiome is increasingly recognized as a key player in aging and health.
 
 ## Project Objectives
 1. Develop a web application to analyze bacterial data related to the gut microbiome and aging.
@@ -14,7 +16,13 @@ This project is part of the BMI-8540 course and focuses on analyzing bacterial d
 4. Store the processed data in a structured SQLite database.
 
 ## Background and Motivation
-The gut microbiome is an intricate community of microorganisms that inhabit the human gastrointestinal tract, playing vital roles in digestion, immune function, and overall health. Recent studies have shown that the composition of the gut microbiome shifts significantly with age, with notable increases in inflammation-associated bacteria and decreases in beneficial probiotic strains. Such alterations can impact metabolic health, immune regulation, and susceptibility to age-related diseases. Therefore, analyzing these microbial shifts is crucial for understanding the aging process and identifying potential intervention strategies. This project aims to address the gap in readily accessible web-based tools for microbiome data analysis. By developing an intuitive application that categorizes bacterial species based on health markers, this project seeks to bridge the gap between raw microbial data and actionable insights. It leverages modern data processing techniques to create a comprehensive resource for both academic and clinical research.
+The gut microbiome, an intricate community of microorganisms residing in the human gastrointestinal tract, plays a vital role in digestion, immune function, and overall health. As individuals age, the composition of the gut microbiome undergoes significant shifts, with notable increases in inflammation-associated bacteria and decreases in beneficial probiotic strains. Such alterations are linked to metabolic health challenges, immune dysregulation, and an increased risk of age-related diseases.
+
+### Biological and Health Motivation
+Understanding these microbial shifts is crucial for recognizing potential biomarkers of healthy aging and identifying therapeutic interventions. The dynamic nature of the gut microbiome across different life stages suggests that targeted microbial interventions could support healthy aging by restoring microbial balance and mitigating age-related inflammatory responses.
+
+### Significance and Novelty
+Despite the growing recognition of the gut microbiome's role in aging, there is a gap in accessible web-based tools that facilitate microbiome data analysis and visualization specifically focused on aging. Existing research has largely focused on isolated bacterial strains or specific diseases, while this project aims to provide a comprehensive tool for analyzing bacterial data from a holistic perspective. By incorporating modern data processing techniques, this project distinguishes itself from prior work by enabling the exploration of microbiome shifts specifically associated with aging.This web-based application not only addresses a significant gap in microbiome research but also provides a practical resource for researchers and clinicians to analyze and visualize microbiome data efficiently.
 
 ## Project Components
 1. **Database Implementation:**
@@ -26,6 +34,25 @@ The gut microbiome is an intricate community of microorganisms that inhabit the 
 3. **Python Script for Data Analysis and Visualization:**
    - Uses Pandas and Flask to analyze and display data.
    - Scripts: `app.py`, `utils.py`
+   
+### Code Snippets
+```python
+import pandas as pd
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+@app.route('/upload', methods=['POST'])
+def upload_bacteria_data():
+    file = request.files['file']
+    data = pd.read_csv(file)
+    # Process and categorize data
+    response = {'message': 'Data uploaded and processed successfully'}
+    return jsonify(response)
+
+if __name__ == '__main__':
+    app.run(debug=True)
+```
 
 ## Documentation
 All code is well-documented with inline comments and explanatory notes. The README file serves as the primary guide for setup and usage. Additional user manuals and online help are available within the repository.
@@ -60,4 +87,3 @@ This project does not involve any sensitive or personal data. All data used is e
 
 ## Originality Statement
 This work is entirely original and created by the project author. No proprietary code or datasets were used without proper citation. All scripts and methods were developed from scratch for the purpose of this project.
-
