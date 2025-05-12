@@ -7,10 +7,13 @@ BMI-8540 Final Project: Gut Microbiome Dynamics in Aging Insights through a Web-
 What are the most significant bacterial markers in the gut microbiome that correlate with age-related health changes, such as increased inflammation or decreased metabolic health?
 
 ## Abstract
-This project is part of the BMI-8540 course and focuses on analyzing bacterial data related to the gut microbiome and aging. 
-The objective is to build a web-based tool that allows users to upload bacterial data, process it, and categorize bacteria based on various health markers. 
-The project aims to explore the relationship between the gut microbiome and aging, with a focus on identifying bacteria that act as health indicators. 
+This project is part of the BMI-8540 course and focuses on analyzing bacterial data related to the gut microbiome and aging.
+The objective is to build a web-based tool that allows users to upload bacterial data, process it, and categorize bacteria based on various health markers.
+The project aims to explore the relationship between the gut microbiome and aging, with a focus on identifying bacteria that act as health indicators.
 The gut microbiome is increasingly recognized as a key player in aging and health.
+
+## Important File in Repository
+- The file `final_expanded_gut_microbial_data_aging.csv` contains the comprehensive gut microbial data used for the analysis. Please refer to this file for data insights and processing.
 
 ## Role of the SQLite Database
 
@@ -55,12 +58,12 @@ The data is structured in a table called bacteria, which has the following colum
 4. Store the processed data in a structured SQLite database.
 
 ## Background and Motivation
-The gut microbiome, an intricate community of microorganisms residing in the human gastrointestinal tract, plays a vital role in digestion, immune function, and overall health. 
+The gut microbiome, an intricate community of microorganisms residing in the human gastrointestinal tract, plays a vital role in digestion, immune function, and overall health.
 As individuals age, the composition of the gut microbiome undergoes significant shifts, with notable increases in inflammation-associated bacteria and decreases in beneficial probiotic strains.
 Such alterations are linked to metabolic health challenges, immune dysregulation, and an increased risk of age-related diseases.
 
 ### Biological and Health Motivation
-Understanding these microbial shifts is crucial for recognizing potential biomarkers of healthy aging and identifying therapeutic interventions. 
+Understanding these microbial shifts is crucial for recognizing potential biomarkers of healthy aging and identifying therapeutic interventions.
 The dynamic nature of the gut microbiome across different life stages suggests that targeted microbial interventions could support healthy aging by restoring microbial balance and mitigating age-related inflammatory responses.
 
 ### Significance and Novelty
