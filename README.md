@@ -1,7 +1,7 @@
 # BMI-8540-FINAL-PROJECT
 
 ## Project Title
-BMI-8540 Final Project: Gut Microbiome Analysis and Aging
+BMI-8540 Final Project:Gut Microbiome Dynamics in Aging: Insights through a Web-Based Analysis Tool
 
 ## Research Question
 What are the most significant bacterial markers in the gut microbiome that correlate with age-related health changes, such as increased inflammation or decreased metabolic health?
